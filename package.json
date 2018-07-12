@@ -11,7 +11,10 @@
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.3",
     "morgan": "1.9.0",
+    "nodemon": "^1.18.1",
     "winston": "2.0.0"
   },
   "devDependencies": {
@@ -26,6 +29,7 @@
   },
   "scripts": {
     "start": "node index.js",
+    "heroku-postbuild": "cd client && yarn && yarn run build",
     "format": "prettier --write '*.js'",
     "lint": "eslint --fix '*.js'"
   },
@@ -40,5 +44,7 @@
     ]
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "This project is a simple express app built with Node.js.",
+  "author": ""
 }

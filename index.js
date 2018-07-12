@@ -5,6 +5,9 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const winston = require('winston');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://<andyv90>:<maxwell1>@ds235461.mlab.com:35461/heroku_qp3mr2q4');
 
 const app = express();
 // Add headers
@@ -16,8 +19,7 @@ app.use(function (req, res, next) {
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   
-  // Request headers you wish to allow
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requestedß-With,content-type');
   
   // Set to true if you need the website to include cookies in the requests sent
   // to the API (e.g. in case you use sessions)
